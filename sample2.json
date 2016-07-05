@@ -1,0 +1,26 @@
+{
+    "repeat:5": {
+        "background": "Lorem ipsum dolor sit amet.",
+        "somePropName": {
+            "repeat:5": {
+                "key": "{{=it.rand}}"
+            }
+        },
+        "arrayOfThings": {
+            "random:4": [
+                {
+                    "randomKey": 1234
+                },
+                {
+                    "randomKey": 2345
+                },
+                {
+                    "randomKey": 3456
+                },
+                {
+                    "randomKey": 4567
+                }
+            ]
+        }
+    }
+}

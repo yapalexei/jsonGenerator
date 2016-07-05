@@ -1,0 +1,14 @@
+{
+  "name": "json-gen",
+  "version": "1.0.0",
+  "description": "Generates a simple json file from a template.",
+  "main": "jsonGen.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexei Yagolnikov",
+  "license": "MIT",
+  "dependencies": {
+    "dot": "^1.0.3"
+  }
+}
