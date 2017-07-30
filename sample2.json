@@ -3,7 +3,7 @@
         "background": "Lorem ipsum dolor sit amet.",
         "somePropName": {
             "repeat:5": {
-                "key": "{{=it.rand}}"
+                "key": "{{=it.uuid}}"
             }
         },
         "arrayOfThings": {

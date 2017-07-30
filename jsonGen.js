@@ -24,9 +24,6 @@ function readFile (filePath) {
 
     finalResult = runCompiler(readLine(undefined, jsonContent));
 
-    
-    // console.log(JSON.parse(resultText));
-
     writeJsonToFile('generatedFile.json', JSON.parse(finalResult));
 }
 
@@ -35,11 +32,17 @@ function runCompiler(template) {
     var fn = {
         random: function() {
             return ~~(Date.now()/1000 * Math.random())   
+        },
+        uuid: function() {
+            function s4() {
+                return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+            }
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
         }
     };
 
     var tempFn = dot.template(JSON.stringify(template, null, 2), undefined, fn);
-    var resultText = tempFn({rand: fn.random()});   
+    var resultText = tempFn({rand: fn.random(), uuid: fn.uuid()});   
 
     return resultText;
 }
